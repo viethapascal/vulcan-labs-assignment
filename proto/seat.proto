@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+option go_package ="github.com/viethapascal/vulcanlabs-assignment";
+
+message Seat {
+  int32 row = 1;
+  int32 col = 2;
+  bool reserved = 3;
+  bool blocked = 4;
+}
+
+message ReserveRequest {
+  repeated Seat seat = 1;
+}
+
+message ReserveResponse {
+  bool success = 1;
+  string message = 2;
+  repeated Seat data = 3;
+}
+
+message SeatRow {
+  repeated bool available = 1;
+}
+
+message SeatMap {
+  repeated Seat seats = 1;
+  int32 min_distance = 2;
+  int32 num_row = 3;
+  int32 num_col = 4;
+}
+
+message Empty {};
+service SeatReservationService {
+  rpc GetAvailableSeats(Empty) returns (ReserveResponse);
+  rpc Reserve(ReserveRequest) returns (ReserveResponse);
+  rpc GetSeatMap(Empty) returns (SeatMap);
+}
