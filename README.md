@@ -1,9 +1,9 @@
 # Cine Reservation App
 
 ## Architecture
-This application use gPRC to communicate between client and server
+This application use gPRC to communicate between client and server. The client CLI provides 2 commands `get-seat-map` and `reserver` to retrieve and do reserve.
 
-Message schema are defined in `proto` folder
+LevelDB is used to take advantage of key-value and file-based database with no-cost setup
 
 ![image architect](./pictures/architecture.png)
 
