@@ -35,11 +35,16 @@ make all
 ```
 
 Flags:
-⋅⋅⋅-c, --cols int       number of columns (default 10)
-⋅⋅⋅-d, --distance int   distance to server (default 1)
-⋅⋅⋅-h, --help           help for server
-⋅⋅⋅-r, --rows int       number of rows (default 10)
-⋅⋅⋅-p, --port int   server port (default 8080)
+
+    -c, --cols int       number of columns (default 10)
+    
+    -d, --distance int   distance to server (default 1)
+    
+    -h, --help           help for server
+    
+    -r, --rows int       number of rows (default 10)
+    
+    -p, --port int   server port (default 8080)
 
 ## Client
 ### Get seat map
